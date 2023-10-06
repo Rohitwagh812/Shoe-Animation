@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Animation Website</title>
+</head>
+<body>
+    <div>
+    </div>
+        <img src="./asstes/Untitled_design__21_-removebg-preview.png" alt="">
+
+
+   
+</body>
+</html>
+
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: url(./asstes/Untitled_design__18_-removebg-preview.png);
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: back-color 10s  infinite alternate-reverse;
+}
+
+div{
+    height: 380px;
+    width: 380px;
+background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    border-radius: 50%;
+    position: absolute;
+    justify-self: center;
+    z-index: -1;
+    animation: rotate infinite ;
+    animation-duration:  2s;
+    animation-timing-function: ease-in;
+  
+}
+img{
+    height: 60vh;
+    /* animation: floating 2s infinite  ease-in-out; */
+    animation: falling-dwoun 5s ease-in-out;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(20px);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+@keyframes back-color{
+    0%{
+        background: black;
+        background-image: url(./asstes/Untitled_design__18_-removebg-preview.png);
+        background-size: cover;
+    }
+
+    100%{
+        background: white;
+        background-image: url(./asstes/Untitled_design__18_-removebg-preview.png);
+        background-size: cover;
+    }
+}
+
+@keyframes falling-dwoun{
+    0%{
+        transform: translateY(-500%);
+    }
+
+    20%{
+        transform: translateY(-20px);
+    }
+
+    40%{
+        transform: translateY(0%);
+    }
+
+    60%{
+        transform: translateY(-20px);
+    }
+    80%{
+        transform: translateY(0);
+
+    }
+
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+</style>
